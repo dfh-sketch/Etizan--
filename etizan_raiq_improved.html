@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#247844">
+<title>اتّزان</title>
+<style>
+:root{--green:#247844;--green2:#31965a;--pale:#eaf6ed;--bg:#f5f8f5;--text:#183323;--muted:#6d7e72;--white:#fff;--line:#e1ebe3;--shadow:0 8px 28px #1b4b2b0d}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}button,input,textarea,select{font:inherit}button{cursor:pointer}.app{max-width:1100px;margin:auto;padding:18px 16px 100px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}.brand{display:flex;align-items:center;gap:10px}.logo{width:48px;height:48px;border-radius:16px;background:var(--pale);display:grid;place-items:center;font-size:25px}.brand h1{font-size:20px;margin:0}.brand p{font-size:12px;color:var(--muted);margin:0}.date{color:var(--muted);font-size:12px}.page{display:none}.page.active{display:block}.welcome{background:linear-gradient(125deg,#247844,#3c9a5d);color:white;border-radius:24px;padding:24px;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:var(--shadow)}.welcome h2{font-size:25px;margin:0 0 6px}.welcome p{margin:0;opacity:.92}.raiq-bubble{font-size:48px;flex-shrink:0}.section-title{font-size:19px;margin:24px 0 12px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:17px;box-shadow:var(--shadow);min-width:0}.stat-top{display:flex;justify-content:space-between;align-items:center;gap:8px}.stat-icon{background:var(--pale);border-radius:12px;width:42px;height:42px;display:grid;place-items:center;font-size:21px}.muted{color:var(--muted);font-size:13px}.big{font-size:25px;font-weight:700;margin:8px 0 0}.progress{height:8px;background:#e9f0ea;border-radius:99px;overflow:hidden;margin:10px 0}.progress span{display:block;height:100%;width:0;background:var(--green2);border-radius:99px;transition:width .2s}.row{display:flex;align-items:center;gap:10px}.between{display:flex;align-items:center;justify-content:space-between;gap:10px}.btn{border:0;border-radius:12px;padding:10px 15px;background:var(--green);color:white;font-weight:700}.btn.secondary{background:var(--pale);color:var(--green)}.btn.light{background:white;color:var(--green)}.btn.small{padding:6px 10px;font-size:13px}.btn.danger{background:#fff0ee;color:#a93a2e}.btn:active{transform:scale(.98)}.quick-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.list{display:grid;gap:10px}.habit,.entry{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px;border:1px solid var(--line);border-radius:14px;background:#fff}.habit.done{background:#f0f8f1}.habit-label{display:flex;align-items:center;gap:10px}.check{width:24px;height:24px;border:2px solid #b8cbbd;border-radius:8px;display:grid;place-items:center;color:white;flex-shrink:0}.done .check{background:var(--green);border-color:var(--green)}.field{width:100%;padding:11px 12px;border:1px solid #d6e3d9;border-radius:12px;background:white;color:var(--text);outline:none}.field:focus{border-color:var(--green2);box-shadow:0 0 0 3px #31965a1a}label{font-size:13px;color:var(--muted);display:block;margin-bottom:5px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.form-group{margin-bottom:12px}.chat{display:flex;flex-direction:column;gap:10px;min-height:240px;max-height:420px;overflow:auto;padding:4px}.message{max-width:88%;padding:12px 14px;border-radius:16px;background:#f0f5f1;align-self:flex-start;white-space:pre-wrap}.message.me{background:var(--green);color:white;align-self:flex-end}.chat-compose{display:flex;gap:8px;margin-top:12px}.chat-compose input{flex:1;min-width:0}.nav{position:fixed;bottom:0;left:0;right:0;background:#ffffffed;backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:8px max(8px,env(safe-area-inset-left)) calc(8px + env(safe-area-inset-bottom));display:flex;justify-content:center;gap:4px;z-index:10}.nav button{border:0;background:transparent;color:var(--muted);border-radius:13px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 13px;font-size:11px;min-width:58px}.nav button span{font-size:21px;line-height:1.2}.nav button.active{background:var(--pale);color:var(--green);font-weight:700}.empty{text-align:center;color:var(--muted);padding:20px}.toast{position:fixed;top:15px;left:50%;transform:translateX(-50%);background:#183323;color:white;padding:10px 16px;border-radius:12px;display:none;z-index:30}.footnote{font-size:12px;color:var(--muted);margin-top:12px}.tag{background:var(--pale);color:var(--green);border-radius:99px;padding:4px 9px;font-size:12px}.settings-row{padding:14px 0;border-bottom:1px solid var(--line)}@media(max-width:700px){.grid{grid-template-columns:1fr 1fr}.welcome h2{font-size:21px}.welcome{padding:20px}.raiq-bubble{font-size:38px}.app{padding:14px 12px 100px}.nav button{padding:7px 8px;min-width:52px}}@media(max-width:420px){.grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.date{display:none}.nav button{font-size:10px;min-width:0;flex:1;padding-inline:3px}}
+</style>
+</head>
+<body>
+<div class="toast" id="toast"></div>
+<div class="app">
+<header class="top">
+ <div class="brand"><div class="logo">🌱</div><div><h1>اتّزان</h1><p>خطوة صغيرة، فرق كبير</p></div></div>
+ <div class="date" id="todayDate"></div>
+</header>
+
+<main id="home" class="page active">
+ <section class="welcome"><div><span class="tag" style="background:#ffffff25;color:white">مساحتك الخاصة</span><h2>حيّاك الله! 👋</h2><p id="welcomeLine">أنا رايق، خلّنا نخلي يومك أفضل بخطوة بسيطة.</p><div class="quick-actions"><button class="btn light" onclick="showPage('raiq')">تكلّم مع رايق</button><button class="btn" style="background:#ffffff25" onclick="showPage('habits')">شوف عاداتي</button></div></div><div class="raiq-bubble">🤖</div></section>
+ <h2 class="section-title">ملخص يومك</h2>
+ <section class="grid">
+  <div class="card"><div class="stat-top"><div><div class="muted">شرب الماء</div><div class="big"><span id="waterCount">0</span> <span style="font-size:14px;font-weight:400">/ <span id="waterGoalText">8</span> أكواب</span></div></div><div class="stat-icon">💧</div></div><div class="progress"><span id="waterBar"></span></div><div class="quick-actions"><button class="btn small" onclick="changeWater(1)">+ كوب</button><button class="btn small secondary" onclick="changeWater(-1)">−</button></div></div>
+  <div class="card"><div class="stat-top"><div><div class="muted">النوم</div><div class="big"><span id="sleepCount">0</span> <span style="font-size:14px;font-weight:400">ساعة</span></div></div><div class="stat-icon">🌙</div></div><div class="progress"><span id="sleepBar"></span></div><button class="btn small secondary" style="margin-top:8px" onclick="showPage('health')">تسجيل النوم</button></div>
+  <div class="card"><div class="stat-top"><div><div class="muted">الحركة</div><div class="big"><span id="moveCount">0</span> <span style="font-size:14px;font-weight:400">خطوة</span></div></div><div class="stat-icon">👟</div></div><div class="progress"><span id="moveBar"></span></div><button class="btn small secondary" style="margin-top:8px" onclick="showPage('health')">تحديث الحركة</button></div>
+ </section>
+ <h2 class="section-title">عادات اليوم <span class="tag" id="habitSummary">0 من 0</span></h2>
+ <section class="card"><div id="homeHabits" class="list"></div><div class="quick-actions"><button class="btn secondary" onclick="showPage('habits')">إدارة العادات</button></div></section>
+ <h2 class="section-title">رسالة رايق</h2><section class="card"><div class="row" style="align-items:flex-start"><div class="stat-icon">🤖</div><div style="flex:1"><strong>على مهلك، يا بطل.</strong><p class="muted" id="dailyTip" style="margin:5px 0 0">مو مطلوب منك تكون مثالي؛ المهم تستمر وتحاول.</p></div></div><button class="btn secondary" style="margin-top:12px" onclick="newTip()">رسالة ثانية</button></section>
+</main>
+
+<main id="habits" class="page">
+ <h2 class="section-title" style="margin-top:8px">عاداتي 🎯</h2><p class="muted">علّم على العادة إذا أنجزتها اليوم. كل يوم صفحة جديدة.</p>
+ <section class="card"><form id="habitForm"><div class="form-row"><div class="form-group"><label for="habitName">اسم العادة</label><input id="habitName" class="field" maxlength="60" placeholder="مثلاً: قراءة 10 دقائق" required></div><div class="form-group"><label for="habitEmoji">رمز</label><select id="habitEmoji" class="field"><option>✅</option><option>📚</option><option>🚶</option><option>🧘</option><option>🕌</option><option>💧</option><option>🎯</option><option>🛏️</option></select></div></div><button class="btn" type="submit">+ إضافة عادة</button></form></section>
+ <h3 class="section-title">قائمة اليوم</h3><section class="card"><div id="habitList" class="list"></div></section>
+</main>
+
+<main id="health" class="page">
+ <h2 class="section-title" style="margin-top:8px">صحتي 💚</h2><p class="muted">سجّل معلوماتك اليومية لمتابعة عاداتك الصحية بشكل بسيط.</p>
+ <section class="grid">
+  <div class="card"><div class="stat-top"><strong>💧 الماء</strong><span class="tag">يومي</span></div><p class="muted">عدد الأكواب التي شربتها اليوم.</p><div class="between"><button class="btn small" onclick="changeWater(-1)">−</button><strong id="healthWater">0 أكواب</strong><button class="btn small" onclick="changeWater(1)">+</button></div></div>
+  <div class="card"><div class="stat-top"><strong>🌙 النوم</strong><span class="tag">بالساعات</span></div><p class="muted">أدخل مدة نومك التقريبية.</p><input id="sleepInput" type="number" min="0" max="24" step="0.5" class="field" placeholder="مثلاً 8"><button class="btn" style="margin-top:9px;width:100%" onclick="saveSleep()">حفظ النوم</button></div>
+  <div class="card"><div class="stat-top"><strong>👟 الحركة</strong><span class="tag">خطوات</span></div><p class="muted">أدخل عدد خطواتك من تطبيق الصحة إن توفر.</p><input id="moveInput" type="number" min="0" max="100000" step="100" class="field" placeholder="مثلاً 4000"><button class="btn" style="margin-top:9px;width:100%" onclick="saveMove()">حفظ الخطوات</button></div>
+ </section>
+ <p class="footnote">هذه المتابعة للتنظيم الشخصي وليست تشخيصًا طبيًا. احتياجات النوم والماء والحركة تختلف من شخص لآخر.</p>
+</main>
+
+<main id="raiq" class="page">
+ <h2 class="section-title" style="margin-top:8px">اسأل رايق 🤖</h2><p class="muted">سوالف ونصائح خفيفة، بلهجتنا وبحدود الاحترام.</p>
+ <section class="card"><div id="chat" class="chat"><div class="message">هلا والله! أنا رايق 🌱 وش ودّك نسوي اليوم؟ نرتّب يومك، نتكلم عن عاداتك، أو تسولف شوي؟</div></div><form id="chatForm" class="chat-compose"><input id="chatInput" class="field" maxlength="500" placeholder="اكتب لرايق..." autocomplete="off" required><button class="btn" type="submit">إرسال</button></form><p class="footnote">رايق يفهم مجموعة من الأسئلة الشائعة ويرد عليها محليًا. لا يتصل بالإنترنت، لذلك قد يحتاج توضيحًا في الأسئلة غير المألوفة أو الحديثة.</p></section>
+ <div class="quick-actions"><button class="btn secondary" onclick="quickChat('ساعدني أرتب يومي')">رتّب يومي</button><button class="btn secondary" onclick="quickChat('أحتاج تشجيع')">شجّعني</button><button class="btn secondary" onclick="quickChat('كيف ألتزم بعاداتي؟')">كيف ألتزم؟</button></div>
+</main>
+
+<main id="progress" class="page">
+ <h2 class="section-title" style="margin-top:8px">تقدّمي 📈</h2><p class="muted">شوف إنجازاتك لهذا اليوم. التقدّم مو سباق مع أحد.</p>
+ <section class="grid">
+  <div class="card"><div class="muted">العادات المنجزة</div><div class="big" id="progressHabits">0/0</div><div class="progress"><span id="progressHabitBar"></span></div></div>
+  <div class="card"><div class="muted">أكواب الماء</div><div class="big" id="progressWater">0/8</div><div class="progress"><span id="progressWaterBar"></span></div></div>
+  <div class="card"><div class="muted">ساعات النوم</div><div class="big" id="progressSleep">0</div><div class="progress"><span id="progressSleepBar"></span></div></div>
+ </section>
+ <h3 class="section-title">إنجازاتك</h3><section class="card"><div id="badges" class="list"></div></section>
+</main>
+
+<main id="settings" class="page">
+ <h2 class="section-title" style="margin-top:8px">الإعدادات ⚙️</h2><section class="card">
+  <div class="settings-row"><strong>هدف الماء اليومي</strong><p class="muted">اختر هدفًا يناسبك من حيث عدد الأكواب.</p><div class="row"><input id="waterGoal" type="number" min="1" max="30" class="field" style="max-width:120px"><button class="btn" onclick="saveGoal()">حفظ الهدف</button></div></div>
+  <div class="settings-row"><strong>رسالة الترحيب</strong><p class="muted">اختر أسلوب الرسالة في الصفحة الرئيسية.</p><select id="greeting" class="field" style="margin-bottom:8px"><option value="calm">هادئة ومشجعة</option><option value="fun">خفيفة وفيها ذب بسيط</option></select><button class="btn secondary" onclick="saveGreeting()">حفظ</button></div>
+  <div class="settings-row"><strong>بياناتك</strong><p class="muted">بيانات التطبيق محفوظة محليًا في هذا المتصفح على جهازك.</p><button class="btn danger" onclick="resetData()">مسح بيانات التطبيق</button></div>
+ </section>
+ <p class="footnote">إذا فتحت الموقع من جهاز أو متصفح آخر، فلن تنتقل البيانات تلقائيًا.</p>
+</main>
+</div>
+
+<nav class="nav" aria-label="القائمة الرئيسية">
+ <button class="active" data-page="home" onclick="showPage('home',this)"><span>🏠</span>الرئيسية</button>
+ <button data-page="habits" onclick="showPage('habits',this)"><span>✅</span>عاداتي</button>
+ <button data-page="health" onclick="showPage('health',this)"><span>💚</span>صحتي</button>
+ <button data-page="raiq" onclick="showPage('raiq',this)"><span>🤖</span>رايق</button>
+ <button data-page="progress" onclick="showPage('progress',this)"><span>📈</span>تقدّمي</button>
+ <button data-page="settings" onclick="showPage('settings',this)"><span>⚙️</span>إعدادات</button>
+</nav>
+
+<script>
+const KEY='focusOnYourselfDataV1';
+const today=()=>new Date().toLocaleDateString('en-CA');
+const defaultData=()=>({date:today(),water:0,waterGoal:8,sleep:0,move:0,greeting:'calm',habits:[{id:1,name:'شرب الماء',emoji:'💧',done:false},{id:2,name:'قراءة أو تعلّم شيء',emoji:'📚',done:false},{id:3,name:'الحركة ولو قليلًا',emoji:'🚶',done:false}],nextId:4});
+let data;
+try{data=JSON.parse(localStorage.getItem(KEY))||defaultData()}catch(e){data=defaultData()}
+if(data.date!==today()){data.date=today();data.water=0;data.sleep=0;data.move=0;data.habits=(data.habits||[]).map(h=>({...h,done:false}));}
+function persist(){localStorage.setItem(KEY,JSON.stringify(data));render()}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.style.display='block';clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>t.style.display='none',2200)}
+function showPage(id,button){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));window.scrollTo({top:0,behavior:'smooth'});if(id==='raiq')document.getElementById('chatInput').focus({preventScroll:true})}
+function changeWater(n){data.water=Math.max(0,Math.min(99,(Number(data.water)||0)+n));persist();if(n>0)toast('عوافي! تم تسجيل كوب ماء 💧')}
+function saveSleep(){const v=Number(document.getElementById('sleepInput').value);if(!Number.isFinite(v)||v<0||v>24){toast('أدخل عدد ساعات من 0 إلى 24');return}data.sleep=v;persist();toast('تم حفظ النوم 🌙')}
+function saveMove(){const v=Number(document.getElementById('moveInput').value);if(!Number.isFinite(v)||v<0||v>100000){toast('تأكد من عدد الخطوات');return}data.move=Math.floor(v);persist();toast('تم حفظ خطواتك 👟')}
+function saveGoal(){const v=Number(document.getElementById('waterGoal').value);if(!Number.isInteger(v)||v<1||v>30){toast('اختر هدفًا من 1 إلى 30 كوبًا');return}data.waterGoal=v;persist();toast('تم حفظ هدف الماء')}
+function saveGreeting(){data.greeting=document.getElementById('greeting').value;persist();toast('تم حفظ الإعداد')}
+function resetData(){if(confirm('متأكد أنك تريد مسح جميع بيانات التطبيق من هذا المتصفح؟')){data=defaultData();persist();document.getElementById('chat').innerHTML='<div class="message">رجعنا من البداية 🌱 وش نبدأ فيه؟</div>';toast('تمت إعادة ضبط البيانات')}}
+function toggleHabit(id){const h=data.habits.find(x=>x.id===id);if(h)h.done=!h.done;persist()}
+function deleteHabit(id){if(confirm('تحذف هذه العادة؟')){data.habits=data.habits.filter(h=>h.id!==id);persist()}}
+document.getElementById('habitForm').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('habitName').value.trim();if(!name)return;data.habits.push({id:data.nextId++,name,emoji:document.getElementById('habitEmoji').value,done:false});document.getElementById('habitName').value='';persist();toast('انضافت العادة بنجاح 🎯')});
+const tips=['مو مطلوب منك تكون مثالي؛ المهم تستمر وتحاول.','خطوة صغيرة اليوم أحسن من خطة كبيرة ما تبدأ فيها.','إذا فاتك يوم، عادي. ارجع اليوم ولا تحوّل يومًا واحدًا إلى أسبوع.','خذها بهدوء، التغيير يحتاج وقت وصبر.','لا تقارن بدايتك بمنتصف طريق شخص ثاني.'];
+function newTip(){document.getElementById('dailyTip').textContent=tips[Math.floor(Math.random()*tips.length)]}
+function addMessage(text,me=false){const div=document.createElement('div');div.className='message'+(me?' me':'');div.textContent=text;const chat=document.getElementById('chat');chat.appendChild(div);chat.scrollTop=chat.scrollHeight}
+
+let raiqLastTopic = '';
+function normalizeArabic(value){
+  return value.toLowerCase()
+    .replace(/[ًٌٍَُِّْـٰ]/g,'')
+    .replace(/[أإآ]/g,'ا')
+    .replace(/ى/g,'ي')
+    .replace(/[؟?!.,،؛:]/g,' ')
+    .replace(/\s+/g,' ')
+    .trim();
+}
+function raiqReply(input){
+  const s = normalizeArabic(input);
+  const has = (pattern) => pattern.test(s);
+
+  if(has(/^(هلا|اهلا|مرحبا|السلام عليكم|سلام|صباح الخير|مساء الخير)( يا رايق)?$/) || has(/السلام عليكم ورحمة الله/)){
+    raiqLastTopic='greeting';
+    return 'يا هلا والله 🌿 حيّاك! أنا رايق، مساعدك في اتّزان. وش ودّك نسوي اليوم؟';
+  }
+  if(has(/وش اسمك|ما اسمك|اسمك ايش|من انت|مين انت|عرف بنفسك|وش انت/)){
+    raiqLastTopic='about';
+    return 'أنا رايق 🤖، مساعدك داخل تطبيق اتّزان. أساعدك في تنظيم يومك ومتابعة عاداتك والاهتمام بصحتك، وبرضه أقدر أجاوب عن بعض الأسئلة العامة.';
+  }
+  if(has(/وش اسم التطبيق|اسم التطبيق|اسم البرنامج|وش اتزان|ما هو اتزان/)){
+    raiqLastTopic='about';
+    return 'اسم التطبيق اتّزان 🌿، وفكرته يساعدك توازن بين صحتك وعاداتك ونومك وحركتك. وأنا رايق، المساعد اللي معك هنا.';
+  }
+  if(has(/وش تقدر تسوي|كيف تساعدني|وش فايدتك|وش مهامك|وش اقدر اسوي معك/)){
+    raiqLastTopic='about';
+    return 'أقدر أساعدك ترتّب يومك، تبني عادات صغيرة، تتابع الماء والنوم والحركة، وتراجع أهدافك. وأقدر أسولف معك وأجاوب عن بعض الأسئلة العامة. يلا، وش نبدأ فيه؟ 😎';
+  }
+  if(has(/من صنعك|من برمجك|مين سواك|هل انت ذكاء اصطناعي/)){
+    raiqLastTopic='about';
+    return 'أنا مساعد رقمي مدمج في اتّزان 🌱، والنسخة الحالية تشتغل بردود محلية مبرمجة داخل الملف؛ يعني ما عندي اتصال مباشر بالإنترنت.';
+  }
+  if(has(/^(شكرا|شكرا لك|يعطيك العافيه|تسلم|مشكور|مشكوره)$/)){
+    return 'العفو 🌱 هذا واجبي! وش تحب نسوي بعد؟';
+  }
+  if(has(/^(ايه|نعم|تمام|طيب|اوكي|اوكيه|يب|صح)$/)){
+    if(raiqLastTopic==='plan') return 'تمام، عطِني أهم مهمة عندك اليوم والوقت المتاح لك، ونرتّبها خطوة خطوة.';
+    if(raiqLastTopic==='habits') return 'حلو! اختر عادة وحدة ودك تثبتها أول، ونخلي بدايتها سهلة وواضحة.';
+    if(raiqLastTopic==='feelings') return 'أنا معك، خذ راحتك. وش صار وخلاك تحس كذا؟';
+    return 'تمام 😄 وش تحب نكمل فيه؟ تقدر تسألني عن اسمي، أو نرتّب يومك، أو نراجع عاداتك.';
+  }
+  if(has(/متضايق|حزين|زعلان|مكتئب|ضايق صدري|مهموم|مقهور|قلقان|متوتر|خايف/)){
+    raiqLastTopic='feelings';
+    return 'أسمعك، وخذ راحتك بالكلام 🌿 ما يحتاج ترتّب كلامك من البداية. وش أكثر شيء شاغل بالك الحين؟';
+  }
+  if(has(/طفشان|ملل|زهقان/)){
+    raiqLastTopic='bored';
+    return 'أجل نغيّر الجو شوي 😄 نقدر نسولف، أو نتعلم معلومة غريبة، أو تختار مهمة صغيرة تنجزها خلال عشر دقايق. وش جوّك؟';
+  }
+  if(has(/رتب|ترتيب|جدول|خطتي|خطط لي|نظم يومي|نظم وقتي|يومي|مهامي/)){
+    raiqLastTopic='plan';
+    return 'أبشر، نرتّبها بدون تعقيد 🌱 اكتب لي أهم شيئين أو ثلاثة لازم تسويها اليوم، وكم عندك وقت، وأنا أساعدك نرتبها بالأولوية.';
+  }
+  if(has(/هدف|اهداف|انجاز|تقدم|اطور نفسي|تطوير نفسي/)){
+    raiqLastTopic='goals';
+    return 'خلّ الهدف واضح وصغير وتقدر تعرف إذا أنجزته. مثلًا بدل «أبي أتطور»، قل «أقرأ أو أتعلم 10 دقائق اليوم». وش الهدف اللي في بالك؟';
+  }
+  if(has(/عادات|التزم|التزام|كسلان|تسويف|ما اقدر استمر|ابدأ عادة/)){
+    raiqLastTopic='habits';
+    return 'خلّنا نبدأ بعادة وحدة بس 😄 اربطها بشيء تسويه يوميًا، وخليها سهلة بالبداية. وش العادة اللي ودك تثبتها؟';
+  }
+  if(has(/مذاكر|دراسة|اختبار|واجب|مدرسة|اذاكر/)){
+    raiqLastTopic='study';
+    return 'خلّ المذاكرة على دفعات: اختر جزءًا واحدًا، ركّز عليه 20–25 دقيقة، ثم خذ استراحة قصيرة. وش المادة أو الدرس اللي تذاكره؟';
+  }
+  if(has(/ماء|اشرب|شرب الماء|كوب/)){
+    raiqLastTopic='water';
+    return 'تقدر تسجّل الماء من صفحة «صحتي» أو تضغط «+ كوب» في الرئيسية 💧 اشرب على فترات، وخلك منتبه لاحتياجك بدل ما تضغط على نفسك.';
+  }
+  if(has(/نوم|انام|السهر|ساعات النوم/)){
+    raiqLastTopic='sleep';
+    return 'للنوم الأفضل، حاول تثبّت وقتًا مناسبًا للنوم والاستيقاظ وخفف الشاشات قبل النوم إذا قدرت. وتقدر تسجّل ساعات نومك في صفحة «صحتي» 🌙';
+  }
+  if(has(/مشي|خطوات|حركة|رياضة|تمارين/)){
+    raiqLastTopic='movement';
+    return 'الحركة البسيطة تُحسب 👟 امشِ أو تحرّك بما يناسبك، وزِد بالتدريج من دون إجهاد. وتقدر تسجّل خطواتك في صفحة «صحتي».';
+  }
+  if(has(/صحة|صحتي|وزن|اكل|غذاء|تغذية/)){
+    raiqLastTopic='health';
+    return 'أقدر أساعدك بعادات عامة مثل النوم المنتظم، والحركة، والأكل المتوازن. أما التشخيص أو الأعراض المقلقة فالأفضل فيها سؤال مختص. وش الجانب اللي ودك تعرف عنه؟';
+  }
+  if(has(/عاصمة اليابان|وش عاصمة اليابان/)){
+    raiqLastTopic='general';
+    return 'عاصمة اليابان هي طوكيو 🇯🇵 وإذا ودك نقدر نتكلم عن اليابان أو أي معلومة عامة ثانية.';
+  }
+  if(has(/كم عمرك|عمرك كم/)){
+    raiqLastTopic='about';
+    return 'ما عندي عمر مثل البشر 😄 أنا مساعد رقمي داخل اتّزان.';
+  }
+  if(has(/الوقت|كم الساعة|تاريخ اليوم|وش التاريخ اليوم|الطقس|الجو اليوم|الاخبار|آخر الاخبار/)){
+    raiqLastTopic='current';
+    return 'المعلومة هذي تحتاج بيانات مباشرة، والنسخة الحالية من رايق ما تتصل بالإنترنت؛ ما أبي أعطيك معلومة قديمة على أنها جديدة 🌿';
+  }
+  if(has(/هههه|😂|نكت|ذب|امزح|تمزح/)){
+    raiqLastTopic='joke';
+    return 'هههههه شوي شوي علي 😂 أنا رايق مو مهرّج الحارة، بس أبشر بالوناسة الخفيفة.';
+  }
+  if(has(/^(من فضلك|لو سمحت|ممكن|ساعدني)$/)){
+    return 'أبشر، وش تحتاج بالضبط؟ اكتب لي سؤالك أو قل لي وش ودك تنجز، ونشوفها سوا.';
+  }
+  raiqLastTopic='unknown';
+  return 'خلّني أتأكد إني فهمتك صح 🌿 تقدر توضّح لي وش تقصد أو تعطيني مثال؟ أقدر أساعدك في تنظيم يومك وعاداتك وصحتك، وبرضه أجاوب عن بعض الأسئلة العامة. إذا كان سؤالك يحتاج معلومات حديثة، بقول لك بصراحة.';
+}
+
+function sendChat(text){const v=(text??document.getElementById('chatInput').value).trim();if(!v)return;addMessage(v,true);document.getElementById('chatInput').value='';setTimeout(()=>addMessage(raiqReply(v)),180)}
+function quickChat(t){showPage('raiq');sendChat(t)}
+document.getElementById('chatForm').addEventListener('submit',e=>{e.preventDefault();sendChat()});
+function render(){const water=Number(data.water)||0,goal=Number(data.waterGoal)||8,sleep=Number(data.sleep)||0,move=Number(data.move)||0,done=data.habits.filter(h=>h.done).length,total=data.habits.length;
+document.getElementById('todayDate').textContent=new Date().toLocaleDateString('ar-SA',{weekday:'long',day:'numeric',month:'long'});
+document.getElementById('waterCount').textContent=water;document.getElementById('waterGoalText').textContent=goal;document.getElementById('waterBar').style.width=Math.min(100,water/goal*100)+'%';document.getElementById('healthWater').textContent=water+' أكواب';document.getElementById('sleepCount').textContent=sleep;document.getElementById('sleepBar').style.width=Math.min(100,sleep/8*100)+'%';document.getElementById('moveCount').textContent=move.toLocaleString('en-US');document.getElementById('moveBar').style.width=Math.min(100,move/6000*100)+'%';
+document.getElementById('sleepInput').value=sleep||'';document.getElementById('moveInput').value=move||'';document.getElementById('waterGoal').value=goal;document.getElementById('greeting').value=data.greeting||'calm';
+document.getElementById('welcomeLine').textContent=data.greeting==='fun'?'أنا رايق، مهمتي أساعدك مو أراقبك… مع أن العادات تحاول تهرب 😂':'أنا رايق، خلّنا نخلي يومك أفضل بخطوة بسيطة.';
+document.getElementById('habitSummary').textContent=done+' من '+total;
+const makeHabit=(h,home=false)=>`<div class="habit ${h.done?'done':''}"><div class="habit-label" style="min-width:0"><button class="check" aria-label="تبديل إنجاز العادة" onclick="toggleHabit(${h.id})">${h.done?'✓':''}</button><span>${h.emoji}</span><span style="overflow-wrap:anywhere">${escapeHtml(h.name)}</span></div>${home?'':`<button class="btn danger small" onclick="deleteHabit(${h.id})">حذف</button>`}</div>`;
+document.getElementById('homeHabits').innerHTML=data.habits.length?data.habits.slice(0,4).map(h=>makeHabit(h,true)).join(''):'<div class="empty">ما عندك عادات بعد. أضف أول عادة من صفحة «عاداتي».</div>';
+document.getElementById('habitList').innerHTML=data.habits.length?data.habits.map(h=>makeHabit(h)).join(''):'<div class="empty">ابدأ بإضافة عادة صغيرة تناسبك.</div>';
+document.getElementById('progressHabits').textContent=done+'/'+total;document.getElementById('progressHabitBar').style.width=(total?done/total*100:0)+'%';document.getElementById('progressWater').textContent=water+'/'+goal;document.getElementById('progressWaterBar').style.width=Math.min(100,water/goal*100)+'%';document.getElementById('progressSleep').textContent=sleep+' ساعة';document.getElementById('progressSleepBar').style.width=Math.min(100,sleep/8*100)+'%';
+let badges=[];if(done>0)badges.push(['🌱','بداية موفقة','أنجزت عادة واحدة على الأقل اليوم.']);if(total>0&&done===total)badges.push(['🏆','كملت عاداتك','أنجزت كل عاداتك المسجلة اليوم.']);if(water>=goal)badges.push(['💧','هدف الماء','وصلت لهدف الماء الذي حددته.']);if(sleep>=8)badges.push(['🌙','نوم مسجّل','سجلت ثماني ساعات نوم أو أكثر.']);document.getElementById('badges').innerHTML=badges.length?badges.map(b=>`<div class="entry"><div class="row"><span style="font-size:25px">${b[0]}</span><div><strong>${b[1]}</strong><div class="muted">${b[2]}</div></div></div><span class="tag">تم</span></div>`).join(''):'<div class="empty">إنجازاتك تظهر هنا لما تبدأ تسجل تقدمك. كل بداية تستاهل.</div>';
+}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+render();
+</script>
+</body>
+</html>
